@@ -1,4 +1,0 @@
-<p1> No se encontro esa pagina </p1>
-<form method="GET" action="/home/">
-    <br><br><input type="submit" value="Home">
-</form>
