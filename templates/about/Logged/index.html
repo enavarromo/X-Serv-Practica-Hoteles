@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Alojamientos</title>
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="/">Hoteles en Madrid</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="active"><a href="/">Inicio</a></li>
+				<li><a href="/alojamientos">Alojamientos</a></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</div>
+		<div id="Loggin">
+		    <span>Hola! {{ usuario }} <br><a href="/logout">Logout</a>
+		    </span>
+		</div>
+	</div>
+</div>
+
+<div id="wrapper">
+	<div id="staff" class="container">
+		<div class="boxA">
+            <h2>About</h2><br>
+            <p1><strong>Autor</strong>: Eloy Navarro Morales<p1><br><br>
+            <p1><strong>Descripción</strong>: Esta pagina aglutina información extraida del portal de datos abiertos de madrid con la finalidad de mostrar alojamientos y su información, a parte de permitir establecer selecciones sobre ellos para cada usuario y comentar los alojamientos.<p1>
+		</div>
+	</div>
+
+    <div id="buttonery">
+	    <div class="buttL">
+	        {{ buttL |safe }}
+	    </div>
+	    <div class="buttR">
+	        {{ buttR |safe }}
+	    </div>
+	</div>
+
+    <div id="welcome-wrapper">
+	    <div id="welcome" class="container">
+		    <div class="title">
+			    <h3>Bienvenidos a Hoteles en Madrid</h3>
+		    </div>
+		    <p>Esta App utiliza datos del <strong>portal de datos abiertos de Madrid</strong> para recopilar información sobre los <a href="http://www.esmadrid.com/opendata/alojamientos_es.xml"> Alojamientos</a> disponibles. También se dispone de la información en <a href="http://www.esmadrid.com/opendata/alojamientos_en.xml">inglés</a> y en <a href="http://www.esmadrid.com/opendata/alojamientos_fr.xml">francés</a>.</p>
+	    </div>
+	</div>
+</div>
+</body>
+</html>

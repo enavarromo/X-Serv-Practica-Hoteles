@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Alojamientos</title>
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="http://127.0.0.1:8000/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://127.0.0.1:8000/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="/">Hoteles en Madrid</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="active"><a href="/">Inicio</a></li>
+				<li><a href="/alojamientos">Alojamientos</a></li>
+				<li><a href="/about">About</a></li>
+				<li><a href="/xml/{{ usuariopedido |safe }}">xml</a></li>
+			</ul>
+		</div>
+		<div id="Loggin">
+		    <span>Hola! {{ usuario }} <br><a href="/logout">Logout</a>
+		    </span>
+		</div>
+	</div>
+</div>
+<div id="wrapper">
+	<div id="staff" class="container">
+		<div class="boxG">
+		    <h2>Selección de Alojamientos de {{ usuariopedido |safe }}</h2>
+            {{ listaAlojamientos |safe }}
+		</div>
+		<div class="boxC">
+		    <h2>Configuración de usuario</h2><br>
+		    <br><br><p1> Edicion de <strong>Titulo</strong>: </p1>
+		    <form method="POST" action="">
+		        Titulo: <input type="text" name="titulo"><br>
+		        <input type="submit" value="Guardar">
+		    </form>
+            <p1> Edicion de <strong>Estilo</strong>: </p1>
+            <form method="POST" action="">
+                Letra: <input type="text" name="letra"><br>
+                <!--Color: <input type="text" name="color">-->
+                Color: <select name="color">
+                    <option value="naranja" selected="selected">Naranja</option>
+                    <option value="gris" selected="selected">Gris</option>
+                    <option value="rojo" selected="selected">Rojo</option>
+                    <option value="verde" selected="selected">Verde</option>
+                    <option value="azul" selected="selected">Azul</option>
+                    <option value="Amarillo" selected="selected">Amarillo</option>
+                    <option value="Marron" selected="selected">Marron</option>
+                    <option value="Negro" selected="selected">Negro</option>
+                    <option value="blanco" selected="selected">Blanco</option>
+                    <option value="" selected="selected">Actual</option>
+                </select>
+                <br><input type="submit" value="Guardar">
+            </form>
+		</div>
+	</div>
+	<div id="buttonery">
+	    <div class="buttL">
+	        {{ buttL |safe }}
+	    </div>
+	    <div class="buttR">
+	        {{ buttR |safe }}
+	    </div>
+	</div>
+    <div id="welcome-wrapper">
+	    <div id="welcome" class="container">
+		    <div class="title">
+			    <h3>Bienvenidos a Hoteles en Madrid</h3>
+		    </div>
+		    <p>Esta App utiliza datos del <strong>portal de datos abiertos de Madrid</strong> para recopilar información sobre los <a href="http://www.esmadrid.com/opendata/alojamientos_es.xml"> Alojamientos</a> disponibles. Tambien se dispone de la información en <a href="http://www.esmadrid.com/opendata/alojamientos_en.xml">ingles</a> y en <a href="http://www.esmadrid.com/opendata/alojamientos_fr.xml">frances</a>.</p>
+	    </div>
+	</div>
+</div>
+</body>
+</html>
