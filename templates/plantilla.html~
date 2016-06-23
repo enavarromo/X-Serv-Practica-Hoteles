@@ -1,7 +1,0 @@
-<html>
-    <body style="background:#AC8CFD">
-        <p>La pagina "{{ name|safe }}" dice:</p>
-        <p>{{ page|safe }}</p>
-        <form method="GET" action="/home/"><br><input type="submit" value="Home"></form>
-    </body>
-</html>
